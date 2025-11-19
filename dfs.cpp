@@ -1,9 +1,10 @@
-//this code is pretty bad and not safe so you should check it before using it even once
+//this code is pretty bad and not safe so you should use it to study or check it before using it even once
 #include<iostream>
 #include<vector>
-using namespace std;
+using std::cout;
+using std::cin;
 
-void dfs(int to,vector<int>* link,bool* visited) {
+void dfs(int to,std::vector<int>* link,bool* visited) {
   if(!visited[to]) {
     visited[to] = true;
     for(auto temp : link[to]) {
@@ -17,9 +18,9 @@ int main() {
   int node,edge,type;
   cout<<"choose 1:directed , 2:indirected : ";
   cin>>type;
-  cout<<endl;
+  cout<<std::endl;
   cin>>node>>edge;
-  vector<int> garph[node];
+  std::vector<int> garph[node];
   bool visited[node];
   for(int i=0;i<node;i++) {
     visited[i] = false;
